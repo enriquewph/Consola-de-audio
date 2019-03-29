@@ -1,0 +1,6 @@
+# Writing all output to: C:\Users\quiqu\Dropbox\DOCUMENTOS\Colegio\2017\Electr??nica Analogica 2\Consola de Audio\Proteus\Canal 1\Canal 1.log
+set pad_wire_necking on
+bus diagonal
+fanout 10
+route 50
+Process stopped!

@@ -1,0 +1,48 @@
+$(document).ready(function(){
+	//$('a.gallery').colorbox({rel:'gal',maxwidth:"90%",maxHeight:"90%"});
+	$("a.gallery").colorbox({rel: 'gal', maxwidth:"90%",maxHeight:"90%",
+		title: function(){
+			var t = $(this).attr('title');
+			var url = $(this).attr('href');
+			return t+' &nbsp;&nbsp;&nbsp;<a href="' + url + '" target="_blank">Show Full Size Image</a>';
+		}
+	});
+	
+	
+	$("video").each(function( index ) {
+		$(this).on('ended', videoEnd);
+		$(this).on('timeupdate', videoTimeUpdate);
+		$(this).on('play', videoPlay);
+		$(this).on('pause', videoPause);
+	});
+
+	function videoTimeUpdate () {
+			var curTime = this.currentTime;
+			if(curTime > 0.25*(this.duration) && !$(this).hasClass('one')){
+				ga('send', 'event', 'video', '25% video played', $(this).prop('title'));
+				$(this).addClass('one');
+			}
+			if(curTime > 0.50*(this.duration) && !$(this).hasClass('two')){
+				ga('send', 'event', 'video', '50% video played', $(this).prop('title'));
+				$(this).addClass('two');
+			}
+			if(curTime > 0.75*(this.duration) && !$(this).hasClass('three')){
+				ga('send', 'event', 'video', '75% video played', $(this).prop('title'));
+				$(this).addClass('three');
+			}
+
+	}
+
+	function videoEnd () {
+		ga('send', 'event', 'video', '100% video played', $(this).prop('title'))
+	}
+
+	function videoPlay () {
+		ga('send', 'event', 'video', 'video played', $(this).prop('title'))
+	}
+
+	function videoPause () {
+		ga('send', 'event', 'video', 'video paused', $(this).prop('title'))
+	}
+
+});

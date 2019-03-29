@@ -1,0 +1,11 @@
+blanco y verde : fase 30vAC
+naranja y azul : neutro 30vAC
+
+blanco y negro: Vcc y Vee respectivamente
+Mallado: Masa
+
+1- 30V NEUTRO
+2- VEE
+3- GND
+4- 30VFASE
+5- VCC

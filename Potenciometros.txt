@@ -1,0 +1,26 @@
+total potenciometros:
+
+Canal 1:
+1 pote 1k simple para ganancia microfono
+1 slider 10k para volumen
+1 pote 50k simple para bajos
+1 pote 50k simple para altos
+
+Canal 2:
+1 pote 10k simple para ganancia microfno
+1 slider 10k para volumen
+1 pote 50k simple para bajos
+1 pote 50k simple para altos
+
+Canal 3:
+1 pote 10k simple para ganancia microfno
+1 slider 10k para volumen
+1 pote 50k simple para bajos
+1 pote 50k simple para altos
+
+Sumador:
+1 slider 10k para volumen general
+
+Pasabajos:
+1 pote 50k simple para bajos
+1 pote 20k simple para volumen de bajos
